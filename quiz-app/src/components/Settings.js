@@ -1,4 +1,3 @@
-// src/Components/Settings.js
 import React, { useEffect, useState } from 'react';
 function Settings() {
   const [loading, setLoading] = useState(false);

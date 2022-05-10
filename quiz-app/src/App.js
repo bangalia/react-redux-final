@@ -1,15 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import App from './App';
+import Reducer from './Reducer'
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+const store = createStore(Reducer);
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </React.StrictMode>,
+  document.getElementById('root')
+);
 
-// src/App.js
-import Settings from './Components/Settings';
-import './App.css';
-function App() {
-  return (
-    <div className="App">
-      <h1>Quiz App</h1>
-      <Settings />
-    </div>
-  );
-}
-export default App;
